@@ -1,0 +1,51 @@
+@import "lib";
+
+
+.about {
+    text-align: center;
+    &__item {
+        @include mq('pc') {
+            display: flex;
+            justify-content: space-between;
+            margin: 80px 0 100px 0;
+        }
+    }
+    &__image {
+        @include mq('pc') {
+            max-width: 450px;
+        }
+    }
+
+    &__desc {
+        text-align: center;
+        @include mq('pc') {
+            text-align: left;
+        }
+        h3 {
+            margin-top: 50px;
+            font-size: 3.2rem;
+            font-weight: bold;
+            @include mq('pc') {
+                margin-top: 0;
+            }
+        }
+        p {
+            margin-top: 20px;
+            font-size: 2.2rem;
+            font-weight: 100;
+        }
+        &--btn {
+            margin: 30px 0;
+            a {
+                border: 3px solid;
+                border-radius: 25px;
+                font-size: 1.8rem;
+                padding: 5px 30px;
+                &:hover {
+                    background-color: #51A2BC;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

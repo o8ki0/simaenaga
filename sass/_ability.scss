@@ -1,0 +1,35 @@
+@import "_lib.scss";
+
+.ability {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @include mq('pc'){
+        .ability {
+            &__list {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__item {
+        @include mq('pc') {
+            margin-left: 100px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        &--title {
+            font-size: 3.2rem;
+            color: #51A2BC;
+        }
+        &--desc {
+            font-size: 2.0rem;
+            font-weight: 100;
+        }
+    }
+    &__image {
+        max-width: 220px;
+        margin-top: 50px;
+    }
+}

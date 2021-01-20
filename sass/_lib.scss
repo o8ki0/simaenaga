@@ -1,0 +1,49 @@
+
+$layout-width-inner: 1180px;
+
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  }
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 10px;
+    line-height: 1.6;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #555;
+}
+
+a {
+    color: #51A2BC;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    @include mq("pc") {
+        max-width: 980px;
+        margin: 0 auto;
+    }
+}
+
+.section-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    display: inline-block;
+    border-bottom: 5px solid #51A2BC;
+    padding-bottom: 12px;
+    margin-top: 70px;
+}

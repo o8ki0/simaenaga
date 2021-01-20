@@ -1,0 +1,14 @@
+.mv {
+    background-image: url(../img/top.png);
+    background-size: cover;
+    @media screen and (min-width:1281px) { 
+      width: 100vw;
+      max-width: 2000px;
+      height: 46.8vw;
+      max-height: 936px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width:1280px) { 
+      height: 46.8vw;
+    }
+}
